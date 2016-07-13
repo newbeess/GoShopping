@@ -1,0 +1,19 @@
+.abc {
+	font-family: Georgia;
+	font-size: 9pt;
+}
+.navi {
+	font-family: Georgia;
+	font-size: 9pt;
+	background-color: #66CC33;
+}
+.mySlides {
+	display:none;
+	width: 170px;
+	height: 170px;
+}
+. mytd{
+	border-collapse: collapse;
+	padding: 0;
+}
+
