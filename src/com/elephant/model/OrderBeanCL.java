@@ -39,7 +39,7 @@ public class OrderBeanCL {
 			if (num == 1) {
 				// orders 插入成功
 				// 从orders表中，取出刚刚插入的订单号
-				ps = con.prepareStatement("SELECT max(ordersId) FROM orders");
+				ps = con.prepareStatement("SELECT max(orderId) FROM orders");
 				rs = ps.executeQuery();
 				int orderId = 0;
 				if (rs.next()) {
@@ -60,10 +60,10 @@ public class OrderBeanCL {
 				// 批量执行任务
 				sm.executeBatch();
 				ps = con.prepareStatement(
-						"SELECT ordersId,username,realname,address,postcode,phone,totalPrice,email FROM users,orders " +
-								"WHERE ordersId=? " +
+						"SELECT orderId,username,realname,address,postcode,phone,totalPrice,email FROM users,orders " +
+								"WHERE orderId=? " +
 								"AND users.userid=" +
-								"(SELECT orders.userId FROM orders WHERE ordersId= ? )");
+								"(SELECT orders.userId FROM orders WHERE orderId= ? )");
 				ps.setLong(1, orderId);
 				ps.setLong(2, orderId);
 
