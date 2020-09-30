@@ -1,4 +1,5 @@
 # GoShopping
+# Amazing app
 JSP＋Java＋Servlet，采用MVC模式开发的购物网站  
 主要模块：  
 
